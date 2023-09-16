@@ -46,7 +46,7 @@ const Step = () => {
 
   return (
     <>
-      <Steps current={current} items={items} />
+      <Steps   progressDot current={current} items={items} />
       <div style={contentStyle}>{steps[current].content}</div>
       <div style={{ marginTop: 24 }}>
                 {current < steps.length - 1 && (

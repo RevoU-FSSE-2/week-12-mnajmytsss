@@ -3,13 +3,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const validationSchema = Yup.object().shape({
-  username: Yup.string()
-    .min(8)
-    .required("Please input your username!"),
+  username: Yup.string().min(8).required("Please input your username!"),
   password: Yup.string()
     .min(8, "Password must be alphanumeric and min 8 characters")
-    .matches(
-      /^(?=.*[a-zA-Z])(?=.*[0-9])/)
+    .matches(/^(?=.*[a-zA-Z])(?=.*[0-9])/)
     .required("Please input your password!"),
 });
 
@@ -30,12 +27,12 @@ const AccountInformation = () => {
       name="basic"
       labelCol={{ span: 8 }}
       wrapperCol={{ span: 16 }}
-      style={{ maxWidth: 600 }}
+      style={{ maxWidth: 500, paddingTop: 70, height: 300 }}
       autoComplete="off"
       onFinish={formik.handleSubmit}
       onFinishFailed={formik.handleBlur}
     >
-      <Form.Item
+      <Form.Item   
         label="Username"
         name="username"
         validateStatus={formik.errors.username ? "error" : ""}

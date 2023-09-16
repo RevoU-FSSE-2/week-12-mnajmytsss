@@ -33,7 +33,7 @@ const PersonalInformation = () => {
       name="basic"
       labelCol={{ span: 8 }}
       wrapperCol={{ span: 16 }}
-      style={{ maxWidth: 600 }}
+      style={{ maxWidth: 500, paddingTop: 50, height: 300 }}
       autoComplete="off"
       onFinish={formik.handleSubmit}
       onFinishFailed={formik.handleBlur}
